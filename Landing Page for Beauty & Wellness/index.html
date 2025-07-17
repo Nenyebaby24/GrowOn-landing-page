@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow On the Go | Beauty & Wellness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="https://via.placeholder.com/30" alt="" />
+      GlowOn
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#features" onclick="closeMenu()">Features</a>
+      <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+      <a href="#offer" onclick="closeMenu()">Offer</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Glow On the Go</h1>
+    <p>Skincare that keeps up with your schedule — fast, clean, and effective.</p>
+    <button class="cta-button" onclick="scrollToOffer()">Get 20% Off Your First Order</button>
+  </header>
+
+  <!-- Problem / Mission -->
+  <section>
+    <h2>You’re Busy. Your Skin Shouldn’t Show It.</h2>
+    <p>Our latest time-saving skincare formula is fast-absorbing and powerful, designed for high-performing professionals who want their skin to reflect their confidence and clarity.</p>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <h2>Why Choose Our Product?</h2>
+    <div class="features">
+      <div class="feature">🌿 All-natural, dermatologist-tested ingredients</div>
+      <div class="feature">⚡ Absorbs in 30 seconds – no greasy residue</div>
+      <div class="feature">💼 Perfect for travel, gym bags, and office drawers</div>
+      <div class="feature">🌎 Eco-conscious packaging</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Professionals Like You Are Saying</h2>
+    <div class="testimonial">“I use this right after my morning shower and head straight to work. No more dull skin!” — Natalie R., Financial Analyst</div>
+    <div class="testimonial">“Finally, a product that works *and* fits my schedule.” — James D., Architect</div>
+  </section>
+
+  <!-- Offer -->
+  <section id="offer">
+    <h2>Your Skin Deserves a Break. Your Wallet Does Too.</h2>
+    <p>For a limited time, new customers get <strong>20% off</strong> their first order. No subscription. Just great results.</p>
+    <button class="cta-button" onclick="openModal()">Claim 20% Off Now</button>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item" onclick="toggleAnswer(0)">
+      <strong>Is it safe for sensitive skin?</strong>
+      <div class="faq-answer">Yes! Dermatologist-tested and hypoallergenic.</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(1)">
+      <strong>How fast will I see results?</strong>
+      <div class="faq-answer">Most users notice improvements in 7 days.</div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(2)">
+      <strong>Can I use this with makeup?</strong>
+      <div class="faq-answer">Absolutely. It works as a perfect base layer for makeup.</div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <label for="name">Full Name:</label><br/>
+      <input type="text" id="name" name="name" required /><br/><br/>
+      <label for="email">Email Address:</label><br/>
+      <input type="email" id="email" name="email" required /><br/><br/>
+      <label for="message">Message:</label><br/>
+      <textarea id="message" name="message" rows="5" required></textarea><br/><br/>
+      <button type="submit" class="cta-button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Modal -->
+  <div id="discountModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()" role="button" aria-label="Close modal">&times;</span>
+      <h2 id="modalTitle">Your Discount is Ready!</h2>
+      <p id="modalDesc">Use code <strong>GLOW20</strong> at checkout for 20% off your first order.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Glow On the Go | Beauty & Wellness</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
