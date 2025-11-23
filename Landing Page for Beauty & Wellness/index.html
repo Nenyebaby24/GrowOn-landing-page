@@ -6,8 +6,35 @@
   <title>Glow On the Go | Beauty & Wellness</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Glowing Back Button Styles */
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      z-index: 1000;
+      box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      box-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Back to Portfolio Button -->
+  <a href="https://your-portfolio-url.com" class="back-button">
+    ← Back to Portfolio
+  </a>
 
   <!-- Navigation Bar -->
   <nav>
@@ -114,3 +141,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
